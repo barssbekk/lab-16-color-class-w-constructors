@@ -62,9 +62,10 @@ int main() {
     int inputGreen{};
     int inputBlue{};
 
-    Color testTwo{};
     while (fileInput >> inputRed >> inputGreen >> inputBlue) {
-        vecColor.push_back(Color(inputRed, inputGreen));
+        vecColor.push_back(Color(inputRed, inputGreen, inputBlue));
+        vecColor.push_back(Color()); // Default constructor
+        vecColor.push_back(Color(inputRed, inputGreen)); // Partial constructor
     }
 
     // Populate with data
