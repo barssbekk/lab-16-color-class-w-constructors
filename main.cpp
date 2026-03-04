@@ -22,7 +22,7 @@ public:
     }
     // Blue is 255 by default
     Color(const int userR, const int userG) {
-        m_red = userG;
+        m_red = userR;
         m_green = userG;
         m_blue = 255;
         cout << "Partial Constructor is called\n";
@@ -78,8 +78,14 @@ int main() {
 
     cout << "-------------------\n";
     cout << "CONSTRUCTORS TEST: \n";
-    Color testTwo{1, 1};
-    testTwo.print();
+    Color testPartial{1, 1};
+    testPartial.print();
+
+    Color testDefault{};
+    testDefault.print();
+
+    Color testParameter{125, 210, 310};
+    testParameter.print();
 
 
     return 0;
