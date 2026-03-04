@@ -11,6 +11,8 @@ private:
     int m_green{};
     int m_blue{};
 public:
+    // Default Constructor
+    Color() { m_red = 0; m_green = 0; m_blue = 2; }
     // Getter
     int getRed() const { return m_red; }
     int getGreen() const { return m_green; }
@@ -32,32 +34,34 @@ public:
 };
 
 int main() {
-    vector<Color> vecColor{};
+    // vector<Color> vecColor{};
+    Color test{};
+    cout << test.getBlue();
 
     // Check if file opens
-    ifstream fileInput{"data.txt"};
-    if (!fileInput) {
-        cerr << "File not found\n";
-        return 1;
-    }
+    // ifstream fileInput{"data.txt"};
+    // if (!fileInput) {
+    //     cerr << "File not found\n";
+    //     return 1;
+    // }
 
-    int inputRed{};
-    int inputGreen{};
-    int inputBlue{};
+    // int inputRed{};
+    // int inputGreen{};
+    // int inputBlue{};
 
     // Populate with data
-    while (fileInput >> inputRed >> inputGreen >> inputBlue) {
-        Color temp{};
-        temp.setRed(inputRed);
-        temp.setBlue(inputBlue);
-        temp.setGreen(inputGreen);
-        vecColor.push_back(temp);
-    }
+    // while (fileInput >> inputRed >> inputGreen >> inputBlue) {
+    //     Color temp{};
+    //     temp.setRed(inputRed);
+    //     temp.setBlue(inputBlue);
+    //     temp.setGreen(inputGreen);
+    //     vecColor.push_back(temp);
+    // }
 
     // Output a vector
-    for (const auto& colors : vecColor) {
-        colors.print();
-    }
+    // for (const auto& colors : vecColor) {
+    //     colors.print();
+    // }
 
     return 0;
 }
