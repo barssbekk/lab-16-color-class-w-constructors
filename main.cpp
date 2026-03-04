@@ -19,6 +19,8 @@ public:
         m_green = userG;
         m_blue = userB;
     }
+    // ADD: "Partial" constructor
+
     // Getter
     int getRed() const { return m_red; }
     int getGreen() const { return m_green; }
