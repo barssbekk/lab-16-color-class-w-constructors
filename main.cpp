@@ -18,9 +18,8 @@ public:
         m_red = userR;
         m_green = userG;
         m_blue = userB;
-        cout << "Parameter Construc is called\n";
+        cout << "Parameter Constructor is called\n";
     }
-    // ADD: "Partial" constructor
     // Blue is 255 by default
     Color(const int userR, const int userG) {
         m_red = userG;
@@ -50,38 +49,38 @@ public:
 };
 
 int main() {
-    // vector<Color> vecColor{};
-    Color test{2, 2, 8,};
-    cout << test.getRed() << '\n'
-         << test.getBlue() << '\n'
-         << test.getGreen() << '\n';
+    vector<Color> vecColor{};
 
     // Check if file opens
-    // ifstream fileInput{"data.txt"};
-    // if (!fileInput) {
-    //     cerr << "File not found\n";
-    //     return 1;
-    // }
+    ifstream fileInput{"data.txt"};
+    if (!fileInput) {
+        cerr << "File not found\n";
+        return 1;
+    }
 
-    // int inputRed{};
-    // int inputGreen{};
-    // int inputBlue{};
+    int inputRed{};
+    int inputGreen{};
+    int inputBlue{};
 
     // Populate with data
-    // while (fileInput >> inputRed >> inputGreen >> inputBlue) {
-    //     Color temp{};
-    //     temp.setRed(inputRed);
-    //     temp.setBlue(inputBlue);
-    //     temp.setGreen(inputGreen);
-    //     vecColor.push_back(temp);
-    // }
+    while (fileInput >> inputRed >> inputGreen >> inputBlue) {
+        Color temp{};
+        temp.setRed(inputRed);
+        temp.setBlue(inputBlue);
+        temp.setGreen(inputGreen);
+        vecColor.push_back(temp);
+    }
 
     // Output a vector
-    // for (const auto& colors : vecColor) {
-    //     colors.print();
-    // }
-    Color testTwo{};
-    
+    for (const auto& colors : vecColor) {
+        colors.print();
+    }
+
+    cout << "-------------------\n";
+    cout << "CONSTRUCTORS TEST: \n";
+    Color testTwo{1, 1};
+    testTwo.print();
+
 
     return 0;
 }
