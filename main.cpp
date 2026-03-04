@@ -18,10 +18,16 @@ public:
         m_red = userR;
         m_green = userG;
         m_blue = userB;
+        cout << "Parameter Construc is called\n";
     }
     // ADD: "Partial" constructor
-    // Only takes R and G hue
-    Color(const int userR, const int userG) { m_red = userG; m_green = userG; m_blue = 255; }
+    // Blue is 255 by default
+    Color(const int userR, const int userG) {
+        m_red = userG;
+        m_green = userG;
+        m_blue = 255;
+        cout << "Partial Constructor is called\n";
+    }
 
     // Getter
     int getRed() const { return m_red; }
@@ -75,9 +81,7 @@ int main() {
     //     colors.print();
     // }
     Color testTwo{};
-    testTwo.setRed(21);
-    testTwo.setGreen(222);
-    cout << testTwo.getRed();
+    
 
     return 0;
 }
