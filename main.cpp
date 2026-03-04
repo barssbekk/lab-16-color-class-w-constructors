@@ -64,18 +64,7 @@ int main() {
 
     while (fileInput >> inputRed >> inputGreen >> inputBlue) {
         vecColor.push_back(Color(inputRed, inputGreen, inputBlue));
-        vecColor.push_back(Color()); // Default constructor
-        vecColor.push_back(Color(inputRed, inputGreen)); // Partial constructor
     }
-
-    // Populate with data
-    // while (fileInput >> inputRed >> inputGreen >> inputBlue) {
-    //     Color temp{};
-    //     temp.setRed(inputRed);
-    //     temp.setBlue(inputBlue);
-    //     temp.setGreen(inputGreen);
-    //     vecColor.push_back(temp);
-    // }
 
     // Output a vector
     for (const auto& colors : vecColor) {
@@ -90,12 +79,10 @@ int main() {
     Color testDefault{};
     testDefault.print();
 
-    Color testParameter{125, 210, 310};
+    Color testParameter{125, 210, 245};
     testParameter.print();
 
     cout << "----------------------\n";
-
-
 
     return 0;
 }
