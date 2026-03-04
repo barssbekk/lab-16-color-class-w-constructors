@@ -62,14 +62,19 @@ int main() {
     int inputGreen{};
     int inputBlue{};
 
-    // Populate with data
+    Color testTwo{};
     while (fileInput >> inputRed >> inputGreen >> inputBlue) {
-        Color temp{};
-        temp.setRed(inputRed);
-        temp.setBlue(inputBlue);
-        temp.setGreen(inputGreen);
-        vecColor.push_back(temp);
+        vecColor.push_back(Color(inputRed, inputGreen));
     }
+
+    // Populate with data
+    // while (fileInput >> inputRed >> inputGreen >> inputBlue) {
+    //     Color temp{};
+    //     temp.setRed(inputRed);
+    //     temp.setBlue(inputBlue);
+    //     temp.setGreen(inputGreen);
+    //     vecColor.push_back(temp);
+    // }
 
     // Output a vector
     for (const auto& colors : vecColor) {
@@ -77,7 +82,7 @@ int main() {
     }
 
     cout << "-------------------\n";
-    cout << "CONSTRUCTORS TEST: \n";
+    cout << "MANUAL CONSTRUCTORS TEST: \n";
     Color testPartial{1, 1};
     testPartial.print();
 
@@ -86,6 +91,9 @@ int main() {
 
     Color testParameter{125, 210, 310};
     testParameter.print();
+
+    cout << "----------------------\n";
+
 
 
     return 0;
