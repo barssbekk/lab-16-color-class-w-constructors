@@ -12,7 +12,13 @@ private:
     int m_blue{};
 public:
     // Default Constructor
-    Color() { m_red = 0; m_green = 0; m_blue = 2; }
+    Color() { m_red = 0; m_green = 0; m_blue = 0; }
+    // Parameter Constructor
+    Color(const int userR, const int userG, const int userB) {
+        m_red = userR;
+        m_green = userG;
+        m_blue = userB;
+    }
     // Getter
     int getRed() const { return m_red; }
     int getGreen() const { return m_green; }
@@ -35,8 +41,10 @@ public:
 
 int main() {
     // vector<Color> vecColor{};
-    Color test{};
-    cout << test.getBlue();
+    Color test{2, 2, 8,};
+    cout << test.getRed() << '\n'
+         << test.getBlue() << '\n'
+         << test.getGreen() << '\n';
 
     // Check if file opens
     // ifstream fileInput{"data.txt"};
