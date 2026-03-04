@@ -20,6 +20,8 @@ public:
         m_blue = userB;
     }
     // ADD: "Partial" constructor
+    // Only takes R and G hue
+    Color(const int userR, const int userG) { m_red = userG; m_green = userG; m_blue = 255; }
 
     // Getter
     int getRed() const { return m_red; }
@@ -72,6 +74,10 @@ int main() {
     // for (const auto& colors : vecColor) {
     //     colors.print();
     // }
+    Color testTwo{};
+    testTwo.setRed(21);
+    testTwo.setGreen(222);
+    cout << testTwo.getRed();
 
     return 0;
 }
